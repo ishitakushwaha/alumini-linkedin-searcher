@@ -1,0 +1,73 @@
+{
+  "info": {
+    "name": "Alumni LinkedIn Searcher",
+    "_postman_id": "8f73d8c0-1234-5678-90ab-alumni-collection",
+    "description": "Postman collection for testing Alumni LinkedIn Profile Searcher Spring Boot APIs",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Search Alumni Profiles",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"university\": \"University of XYZ\",\n  \"designation\": \"Software Engineer\",\n  \"passoutYear\": 2020\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/alumni/search",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "alumni", "search"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Alumni Profiles",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/alumni/all",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "alumni", "all"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Alumni by ID (Success)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/alumni/1",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "alumni", "1"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Alumni by ID (Not Found)",
+      "request": {
+        "method": "GET",
+        "url": {
+          "raw": "http://localhost:8080/api/alumni/999",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["api", "alumni", "999"]
+        }
+      },
+      "response": []
+    }
+  ]
+}
